@@ -59,7 +59,16 @@ onMounted(() => {
   })
 })
 
-useHead({ title: `${story.value.name} - Gerrit Plehn` })
+const title = `${story.value.name} - Gerrit Plehn`
+
+useHead({ title })
+
+useSeoMeta({
+  title: story.value.name,
+  ogTitle: story.value.name,
+  description: story.value.content.SEO.description,
+  ogDescription: story.value.content.SEO.description,
+})
 </script>
 
 <template>
