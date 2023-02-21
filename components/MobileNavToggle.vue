@@ -2,6 +2,7 @@
   <button
     class="lg:hidden lg:invisible cursor-pointer"
     :class="{ active: active }"
+    aria-label="Show Navigation"
     @click="toggle"
   >
     <div

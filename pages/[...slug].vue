@@ -58,6 +58,8 @@ onMounted(() => {
     resolveRelations: resolveRelations,
   })
 })
+
+useHead({ title: `${story.value.name} - Gerrit Plehn` })
 </script>
 
 <template>

@@ -13,8 +13,8 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  ssr: true,
-  css: ['~/assets/css/tailwind.css',],
+  ssr: process.env.VERCEL_ENV === 'production' ? true : false,
+  css: ['~/assets/css/tailwind.css'],
   runtimeConfig: {
     public: {
       templateToken: process.env.STORYBLOK_PREVIEW_TOKEN,
@@ -24,6 +24,13 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
     },
   },
 })
