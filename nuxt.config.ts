@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         // usePlugin: true,
       },
     ],
+    '@nuxtjs/robots',
   ],
   ssr: process.env.VERCEL_ENV === 'production' ? true : false,
   css: ['~/assets/css/tailwind.css'],
