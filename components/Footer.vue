@@ -8,8 +8,6 @@ defineProps({
   youtube: Object,
   facebook: Object,
 })
-const today = new Date()
-const currentYear = today.getFullYear()
 </script>
 
 <template>
@@ -19,7 +17,7 @@ const currentYear = today.getFullYear()
     >
       <div class="sm:col-span-2 md:col-span-3 lg:col-span-2 flex items-center">
         <div>
-          <NuxtLink to="/" class="flex mb-8">
+          <NuxtLink v-if="logo.file" to="/" class="flex mb-8" title="Landing Page" aria-label="Back to Landing Page">
             <img
               :src="logo.filename"
               :alt="logo.alt"

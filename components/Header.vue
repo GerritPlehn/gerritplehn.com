@@ -50,7 +50,7 @@ onMounted(() => {
     <div
       class="max-w-[1536px] mx-auto w-full px-4 lg:px-8 h-full flex items-center justify-between lg:justify-start"
     >
-      <NuxtLink to="/" class="flex shrink-0" title="Landing Page">
+      <NuxtLink to="/" class="flex shrink-0" title="Landing Page" aria-label="Back to Landing Page">
         <img
           :src="logo.filename"
           :alt="logo.alt"
