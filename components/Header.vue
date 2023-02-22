@@ -7,16 +7,16 @@ const props = defineProps({
   light: Boolean,
 })
 
-const mobileNavOpen = ref(false)
+// const mobileNavOpen = ref(false)
 
-const toggleMobileNav = () => {
-  mobileNavOpen.value = !mobileNavOpen.value
-}
+// const toggleMobileNav = () => {
+//   mobileNavOpen.value = !mobileNavOpen.value
+// }
 
 const route = useRoute()
-watch(route, () => {
-  mobileNavOpen.value = false
-})
+// watch(route, () => {
+//   mobileNavOpen.value = false
+// })
 
 const headerClasses = ref('h-32')
 const logoScale = ref('scale-100')
@@ -78,13 +78,13 @@ onMounted(() => {
           </li>
         </ul>
       </nav>
-      <MobileNavToggle
+      <!-- <MobileNavToggle
         @click="toggleMobileNav"
         :color="light ? 'bg-dark' : 'bg-light'"
-      />
+      /> -->
     </div>
   </header>
-  <MobileNav :mobileNavOpen="mobileNavOpen" :headerNav="nav" />
+  <!-- <MobileNav :mobileNavOpen="mobileNavOpen" :headerNav="nav" /> -->
 </template>
 
 <style scoped>
