@@ -90,7 +90,7 @@ const story = ref()
 const storyblokApi = useStoryblokApi()
 
 const { data } = await storyblokApi.get('cdn/stories/site-config', {
-  version: 'draft',
+  version: 'published',
   resolve_links: 'url',
 })
 

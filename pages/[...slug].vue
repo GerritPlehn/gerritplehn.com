@@ -40,7 +40,7 @@ const story = ref(null)
 const storyblokApi = useStoryblokApi()
 
 const { data } = await storyblokApi.get('cdn/stories/' + slug, {
-  version: 'draft',
+  version: 'published',
   language: language,
   fallback_lang: 'default',
   resolve_relations: resolveRelations,

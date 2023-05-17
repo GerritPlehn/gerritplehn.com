@@ -24,7 +24,7 @@ if (slug) language = await getLanguage(slug)
 const articles = ref(null)
 const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get('cdn/stories/', {
-  version: 'draft',
+  version: 'published',
   starts_with: 'articles',
   language: language,
   fallback_lang: 'default',
